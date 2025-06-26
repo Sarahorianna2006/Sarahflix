@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    color-scheme: dark;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100dvh;
+    background: rgb(15, 15, 15);
+    font-family: sans-serif;
+    
+}
+
+header{
+    background-color: rgb(7, 7, 7);
+    padding:8px;
+    flex-direction: column;
+    width: 100dvw;
+}
+
+header .button{
+   position: absolute;
+   top: 20px;
+   left: 10px;
+}
+
+.content_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Special Gothic Condensed One", sans-serif;
+    color: #db0000;
+    font-size: 50px;
+    padding: 0px 66px;
+}
+
+.main_title_loader{
+    font-family: "Special Gothic Condensed One", sans-serif;
+    color: #db0000;
+    font-size: 50px;
+}
+
+.loading {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    background: #000;
+    animation: loadingInterface 1s;
+    opacity: 0;
+    visibility: hidden;   
+}
+
+.loading .loader {
+    display: grid;
+    grid-template-columns: 1fr;
+    animation: texto 2.5s;
+    overflow: hidden;
+}
+
+.loading.long{
+    animation-duration: 3s;
+}
+
+.loading .loader{
+    display: grid;
+}
+
+.loading h1{
+    overflow: hidden;
+    font-size: 130px;
+}
+
+@keyframes texto {
+    0% {
+        grid-template-columns: 0fr;
+    }
+    100% {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes loadingInterface {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.titles{
+    margin: 15px; 
+    align-items: center;
+}
+
+.img_cargando{
+    width: 120px;
+    height: 120px;
+    animation-name: girarb;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    
+}
+
+.img_user{
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgb(46, 44, 44);
+    padding: 10px 10px;
+    margin: 1px;
+}
+
+@keyframes girarb{
+    from{
+    transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.ubication{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;   
+}
+
+.category{
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+    
+}
+
+section .button{
+  
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgb(46, 44, 44);
+    padding: 10px 10px;
+    margin: 15px;
+    color: rgb(255, 255, 255);
+
+
+}
+
+section .button img{
+    border-radius: 16px;
+}
+
+
+.button:hover{
+    color: #555454;
+}
+
+.button img{
+    border-radius: 10px;
+}
+
+
+
+.menus{
+    aspect-ratio: 5/7;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px #4b4a4a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menus img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 32px;
+}
+
+.poster{
+    position: relative;
+    
+}
+
+.poster img{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.poster::before{
+    content: "RECIEN AGREGADO";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #db0000;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.border_img{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #4b4a4a;
+    
+}
+
+.my_user{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.my_user img{
+    border-radius: 10px;
+    margin: 30px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(7, 7, 7);
+    
+}
+
+footer a {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
